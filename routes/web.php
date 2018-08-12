@@ -32,9 +32,11 @@ Route::middleware(['auth'])->group(function(){
 
     Route::	resource('comments', 'CommentsController');
     Route::	resource('roles', 'RolesController');
-    Route::	resource('roles', 'RolesController');
     Route::	resource('tasks', 'TasksController');
+
+    Route:: get('users/deleteUser/{user_id?}', 'UsersController@deleteUser')->name('users.deleteUser');
     Route::	resource('users', 'UsersController');
+
 
 });
 
