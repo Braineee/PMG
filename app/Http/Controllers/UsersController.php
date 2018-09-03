@@ -110,6 +110,7 @@ class UsersController extends Controller
                 ]);
 
                 if($delete){
+                    //return if flaged as deleted
                     return redirect()->route('users.index')->with('success','User has been deleted successfully');
                 }
 
